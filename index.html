@@ -25,11 +25,18 @@
             <input type="radio" name="tools" value="rainbow" id="rainbow">
             <label for="rainbow"><span>Rainbow Brush</span></label>
         </div>
-        <div class="canva"></div>
+        <div id="canva"></div>
         <div class="color-menu">
-            <input type="color" id="color">
+            <div id="color-wrapper">
+                <input type="color" id="color">
+            </div>
             <div class="palette"></div>
         </div>
     </div>
+    <div class="canva-size">
+        <input type="range" min="4" max="100" step="2" value="16" id="size-slider">
+        <p id="size-txt">16x16</p>
+    </div>
+    <div class="footer"> All rights reserved to Eredah&#169;</div>
 </body>
 </html>
