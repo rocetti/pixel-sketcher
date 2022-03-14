@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <script src="./pixel-sketcher.js" defer></script>
+    <title>Pixel Sketcher</title>
+</head>
+<body>
+    <div class="header">
+        <div class="logo-container">
+
+        </div>
+    </div>
+    <div class="sketcher">
+        <div class="brush-menu">
+            <input type="radio" name="tools" value="brush" id="brush" checked>
+            <label for="brush"><span>Brush</span></label>
+            <input type="radio" name="tools" value="picker" id="picker">
+            <label for="picker"><span>Color Picker</span></label>
+            <input type="radio" name="tools" value="eraser" id="eraser">
+            <label for="eraser"><span>Eraser</span></label>
+            <input type="radio" name="tools" value="rainbow" id="rainbow">
+            <label for="rainbow"><span>Rainbow Brush</span></label>
+        </div>
+        <div class="canva"></div>
+        <div class="color-menu">
+            <input type="color" id="color">
+            <div class="palette"></div>
+        </div>
+    </div>
+</body>
+</html>
