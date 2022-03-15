@@ -20,7 +20,8 @@ body {
 }
 /*HEADER*/
 .header {
-    margin-bottom: auto;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
 }
 /*SKETCHER*/
 .sketcher {
@@ -32,8 +33,32 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: stretch;
     margin-right: 1rem;
+}
+.radio-box {
+    padding: 0.5rem;
+    text-align: center;
+    border-radius: 10px;
+    margin-top: 0.25rem;
+    background-color: #353a3b;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.radio-box:hover{
+    background-color: #4c5355;
+}
+.radio-box::after{
+    background-color: blue;
 }
 /*CANVA*/
 #canva {
@@ -67,8 +92,9 @@ input[type="color"] {
 .palette {
     width: 100px;
     height: 300px;
-    background-color: white;
+    background-color: #353a3b;
     margin-top: auto;
+    margin-bottom: auto;
 }
 /*CANVA SIZE SLIDER*/
 .canva-size {

@@ -11,31 +11,33 @@
 <body>
     <div class="header">
         <div class="logo-container">
-
+            <img src="./img/sketcher-logo-1.gif" alt="animated image of a pixelart logo that says Pixel Sketcher">
         </div>
     </div>
     <div class="sketcher">
         <div class="brush-menu">
             <input type="radio" name="tools" value="brush" id="brush" checked>
-            <label for="brush"><span>Brush</span></label>
+            <label class="radio-box" for="brush">Brush<span class="checkmark"></span></label>
             <input type="radio" name="tools" value="picker" id="picker">
-            <label for="picker"><span>Color Picker</span></label>
+            <label class="radio-box" for="picker">Color Picker<span class="checkmark"></span></label>
             <input type="radio" name="tools" value="eraser" id="eraser">
-            <label for="eraser"><span>Eraser</span></label>
+            <label class="radio-box" for="eraser">Eraser<span class="checkmark"></span></label>
             <input type="radio" name="tools" value="rainbow" id="rainbow">
-            <label for="rainbow"><span>Rainbow Brush</span></label>
+            <label class="radio-box" for="rainbow">Rainbow Brush<span class="checkmark"></span></label>
         </div>
-        <div id="canva"></div>
+        <div class="canva-container">
+            <div id="canva"></div>
+            <div class="canva-size">
+                <input type="range" min="4" max="100" step="2" value="16" id="size-slider">
+                <p id="size-txt">16x16</p>
+            </div>
+        </div>
         <div class="color-menu">
             <div id="color-wrapper">
                 <input type="color" id="color">
             </div>
             <div class="palette"></div>
         </div>
-    </div>
-    <div class="canva-size">
-        <input type="range" min="4" max="100" step="2" value="16" id="size-slider">
-        <p id="size-txt">16x16</p>
     </div>
     <div class="footer"> All rights reserved to Eredah&#169;</div>
 </body>

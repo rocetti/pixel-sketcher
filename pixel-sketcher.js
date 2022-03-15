@@ -9,7 +9,7 @@ size_slider.onchange = function () {
 }
 create_canva(Number(size_slider.value));
 
-//Color Menu
+//Color Menu (Style)
 const color_menu = document.getElementById("color");
 const color_wrapper = document.getElementById("color-wrapper");
 color_menu.onchange = function() {
@@ -18,13 +18,38 @@ color_menu.onchange = function() {
 color_wrapper.style.backgroundColor = color_menu.value;
 
 //Tools
+let tools = document.getElementsByName("tools")
+let tools_buttons = document.getElementsByClassName("radio-box")
+for (let i = 0; i < tools.length; i++) {
+    const element = tools[i];
+    element.addEventListener("change", function () {
+        for (let j = 0; j < tools.length; j++){
+            const tool = tools[j];
+            const button = tools_buttons[j];
+            if (tool.checked) {
+                button.style.backgroundColor = "rgb(20,20,20)";
+            } else {
+                button.style.backgroundColor = "#353a3b";
+            }
+        }
+    })
+}
+for (let i = 0; i < tools.length; i++){
+    const tool = tools[i];
+    const button = tools_buttons[i];
+    if (tool.checked) {
+        button.style.backgroundColor = "rgb(20,20,20)";
+    } else {
+        button.style.backgroundColor = "#353a3b";
+    }
+}
+
 //Use tools while holding the mouse down
 let is_mouse_pressed = false;
 canva.addEventListener("mousedown",function (event) {
     event = event || window.event;
     let target = event.target;
     is_mouse_pressed = true;
-    //if target is canva div use tool
     if (target.getAttribute("class") == "canva-cell") {
         use_tool(target);
     }
@@ -37,7 +62,6 @@ canva.addEventListener("mousemove", function(event){
     event = event || window.event;
     let target = event.target;
     is_mouse_pressed = true;
-    //if target is canva div use tool
     if (target.getAttribute("class") == "canva-cell") {
         use_tool(target);
     }
@@ -47,7 +71,7 @@ document.addEventListener("mouseup", function () {
     is_mouse_pressed = false;
 })
 
-//Funcs
+//Create canva grid
 function create_canva(size) {
     size = typeof size === typeof 0? size : console.log(`ERROR! Invalid canva size. Type:${typeof size} Value:${size}`);
     let area = size * size;
@@ -72,7 +96,7 @@ function create_canva(size) {
         canva.appendChild(new_div);
     }
 }
-
+//Based on selected tool use it on target cell
 function use_tool(trgt) {
     let color = document.getElementById("color");
     let brush = document.getElementById("brush");
@@ -100,7 +124,7 @@ function use_tool(trgt) {
             break;
     }
 }
-
+//convert rgb sintax to hex
 function rgb2hex(rgb) {
     rgb = rgb.match(/^rgb\((\d+),\s*(\d+),\s*(\d+)\)$/);
     function hex(x) {
@@ -108,7 +132,7 @@ function rgb2hex(rgb) {
     }
     return "#" + hex(rgb[1]) + hex(rgb[2]) + hex(rgb[3]);
 }
-
+//pick a random rgb color
 function random_color() {
     let red = Math.floor(Math.random()*256);
     let green = Math.floor(Math.random()*256);
