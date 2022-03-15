@@ -36,10 +36,15 @@ body {
     margin-right: 1rem;
 }
 /*CANVA*/
-.canva {
+#canva {
     width: 400px;
     height: 400px;
     background-color: white;
+    display: grid;
+}
+#canva div {
+    justify-self: stretch;
+    align-self: stretch;
 }
 /*COLORS*/
 .color-menu {
