@@ -34,14 +34,12 @@ body {
     flex-direction: column;
     justify-content: flex-start;
     align-items: stretch;
-    margin-right: 1rem;
+    margin-right: 0.25rem;
 }
 .radio-box {
-    padding: 0.5rem;
+    padding: 0.25rem;
     text-align: center;
-    border-radius: 5px;
-    margin-top: 0.25rem;
-    background-color: #353a3b;
+    margin-bottom: 0.25rem;
     cursor: pointer;
     -webkit-user-select: none;
     -moz-user-select: none;

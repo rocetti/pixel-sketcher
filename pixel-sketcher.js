@@ -21,6 +21,7 @@ color_wrapper.style.backgroundColor = color_menu.value;
 //Tools
 let tools = document.getElementsByName("tools")
 let tools_buttons = document.getElementsByClassName("radio-box")
+//selected tool style
 for (let i = 0; i < tools.length; i++) {
     const element = tools[i];
     element.addEventListener("change", function () {
@@ -30,7 +31,7 @@ for (let i = 0; i < tools.length; i++) {
             if (tool.checked) {
                 button.style.backgroundColor = "rgb(20,20,20)";
             } else {
-                button.style.backgroundColor = "#353a3b";
+                button.style.backgroundColor = "";
             }
         }
     })
@@ -41,7 +42,7 @@ for (let i = 0; i < tools.length; i++){
     if (tool.checked) {
         button.style.backgroundColor = "rgb(20,20,20)";
     } else {
-        button.style.backgroundColor = "#353a3b";
+        button.style.backgroundColor = "";
     }
 }
 
@@ -139,6 +140,7 @@ function use_tool(trgt) {
     }
     create_palette();
 }
+
 //read canva divs and return an array of all colors used on it
 function create_palette() {
     let cells = canva.children;
@@ -155,6 +157,7 @@ function create_palette() {
     }
     show_palette(palette);
 }
+
 //display palette on screen
 function show_palette(pal) {
     const palette_box = document.getElementById("palette");
