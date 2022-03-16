@@ -110,6 +110,20 @@ input[type="color"] {
 #size-slider {
     width: 400px;
 }
+input[type='range'] {
+    -webkit-appearance: none !important;
+    background: #353a3b;
+    height:7px;
+}
+input[type='range']::-webkit-slider-thumb {
+    -webkit-appearance: none !important;
+    background:#eee;
+    height:1rem;
+    width:1rem;
+}
+#size-txt {
+    margin-top: 0.5rem;
+}
 /*FOOTER*/
 .footer {
     display: flex;
@@ -118,4 +132,11 @@ input[type="color"] {
     padding: 1rem;
     margin-top: auto;
     width: 100%;
+}
+.footer a, a:visited, a:active {
+    text-decoration: none;
+    font-weight: bold;
+}
+.footer a:hover {
+    font-weight: normal;
 }
