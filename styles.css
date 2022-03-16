@@ -32,14 +32,14 @@ body {
 .brush-menu {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: stretch;
     margin-right: 1rem;
 }
 .radio-box {
     padding: 0.5rem;
     text-align: center;
-    border-radius: 10px;
+    border-radius: 5px;
     margin-top: 0.25rem;
     background-color: #353a3b;
     cursor: pointer;
@@ -81,20 +81,25 @@ input[type="radio"] {
 }
 input[type="color"] {
     opacity: 0;
-    width: 50px;
-    height: 50px;
+    width: 75px;
+    height: 75px;
     border: none;
 }
 #color-wrapper {
     border: 2px solid white;
     border-radius: 50%;
 }
-.palette {
+#palette {
     width: 100px;
     height: 300px;
     background-color: #353a3b;
     margin-top: auto;
     margin-bottom: auto;
+    display: grid;
+}
+#palette div {
+    justify-self: stretch;
+    align-self: stretch;
 }
 /*CANVA SIZE SLIDER*/
 .canva-size {
@@ -109,5 +114,10 @@ input[type="color"] {
 }
 /*FOOTER*/
 .footer {
+    display: flex;
+    justify-content: center;
+    background-color: rgb(20, 20, 20);
+    padding: 1rem;
     margin-top: auto;
+    width: 100%;
 }
