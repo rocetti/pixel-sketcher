@@ -1,10 +1,10 @@
 # Pixel Sketcher
 A simple pixel drawing site made for The Odin Project course.
 
-understand the problem
+## Understand the problem
 Create a website that has a whiteboard where you can draw pixel art on it. The board dimensions should be square and resizeable (from 4x4 up to 100x100). User should have four types of tools: brush, eraser, color picker and a rainbow brush. The brush will use the color picked on the color menu to paint on click. The color menu has a color picker popup when you click it. (Bonus feature: an palette panel that shows all colors used on the whiteboard)
 
-break into smaller problems
+## Break into smaller problems
 - whiteboard is a div and has a grid inside it which represents each pixel with an empty div that can have its background-color changed as needed.
 - tool menu is a toggle button menu that changes the functionality of user click on the white board pixels.
 - brush: use the color from color menu to change the div bg; colorpick: turn the colorpicker menu value to the color currently on this pixel; eraser: clear the bg color of current div; rainbow brush: randomly pick an rgb value (not changing the color menu) and paint the div bg.
@@ -14,7 +14,7 @@ Notes
 - tools are a radiobuttons
 - color menu is an input type color
 
-pseudocode
+## Pseudocode
 - create a variable to store canva size (default value 16)
 - when the site start it runs the create_canva() function
 - to create a canva first delete all divs inside board container and then create the amount of divs needed for the new canvas size (16x16=256 divs)
